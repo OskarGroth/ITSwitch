@@ -1,12 +1,12 @@
 //
-//  ITSwitch.m
-//  ITSwitch-Demo
+//  ITSwitchControl.m
+//  ITSwitch
 //
 //  Created by Ilija Tovilo on 01/02/14.
 //  Copyright (c) 2014 Ilija Tovilo. All rights reserved.
 //
 
-#import "ITSwitch.h"
+#import "ITSwitchControl.h"
 #import <QuartzCore/QuartzCore.h>
 
 

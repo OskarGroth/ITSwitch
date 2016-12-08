@@ -12,9 +12,9 @@
 		65954EF71B3971100058CAED /* ITSwitchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65954EF61B3971100058CAED /* ITSwitchTests.swift */; };
 		65954EFA1B3971100058CAED /* ITSwitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65954EE31B3971100058CAED /* ITSwitch.framework */; };
 		65954EFB1B3971100058CAED /* ITSwitch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65954EE31B3971100058CAED /* ITSwitch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		65954F031B3971400058CAED /* ITSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 91D13E2C189D08A30019E3B7 /* ITSwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		65954F041B3971490058CAED /* ITSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D13E2D189D08A30019E3B7 /* ITSwitch.m */; };
-		91D13E2E189D08A30019E3B7 /* ITSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D13E2D189D08A30019E3B7 /* ITSwitch.m */; };
+		65954F031B3971400058CAED /* ITSwitchControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 91D13E2C189D08A30019E3B7 /* ITSwitchControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65954F041B3971490058CAED /* ITSwitchControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D13E2D189D08A30019E3B7 /* ITSwitchControl.m */; };
+		91D13E2E189D08A30019E3B7 /* ITSwitchControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D13E2D189D08A30019E3B7 /* ITSwitchControl.m */; };
 		91DEA3AC189D0B2000F5713B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DEA3AB189D0B2000F5713B /* QuartzCore.framework */; };
 		91F4F437189D085F00023528 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F4F436189D085F00023528 /* Cocoa.framework */; };
 		91F4F441189D085F00023528 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91F4F43F189D085F00023528 /* InfoPlist.strings */; };
@@ -81,8 +81,8 @@
 		65954EED1B3971100058CAED /* ITSwitchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ITSwitchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65954EF51B3971100058CAED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65954EF61B3971100058CAED /* ITSwitchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITSwitchTests.swift; sourceTree = "<group>"; };
-		91D13E2C189D08A30019E3B7 /* ITSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ITSwitch.h; path = ../../ITSwitch/ITSwitch.h; sourceTree = "<group>"; };
-		91D13E2D189D08A30019E3B7 /* ITSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ITSwitch.m; path = ../../ITSwitch/ITSwitch.m; sourceTree = "<group>"; };
+		91D13E2C189D08A30019E3B7 /* ITSwitchControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ITSwitchControl.h; path = ../../ITSwitch/ITSwitchControl.h; sourceTree = "<group>"; };
+		91D13E2D189D08A30019E3B7 /* ITSwitchControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ITSwitchControl.m; path = ../../ITSwitch/ITSwitchControl.m; sourceTree = "<group>"; };
 		91DEA3AB189D0B2000F5713B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		91F4F433189D085F00023528 /* ITSwitch-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ITSwitch-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F4F436189D085F00023528 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -146,6 +146,8 @@
 		65954EE41B3971100058CAED /* ITSwitch */ = {
 			isa = PBXGroup;
 			children = (
+				91D13E2C189D08A30019E3B7 /* ITSwitchControl.h */,
+				91D13E2D189D08A30019E3B7 /* ITSwitchControl.m */,
 				65954EE71B3971100058CAED /* ITSwitch.h */,
 				65954EE51B3971100058CAED /* Supporting Files */,
 			);
@@ -175,15 +177,6 @@
 				65954EF51B3971100058CAED /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		91D13E2B189D08800019E3B7 /* ITSwitch */ = {
-			isa = PBXGroup;
-			children = (
-				91D13E2C189D08A30019E3B7 /* ITSwitch.h */,
-				91D13E2D189D08A30019E3B7 /* ITSwitch.m */,
-			);
-			name = ITSwitch;
 			sourceTree = "<group>";
 		};
 		91F4F42A189D085F00023528 = {
@@ -233,7 +226,6 @@
 		91F4F43C189D085F00023528 /* ITSwitch-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				91D13E2B189D08800019E3B7 /* ITSwitch */,
 				91F4F448189D085F00023528 /* ITAppDelegate.h */,
 				91F4F449189D085F00023528 /* ITAppDelegate.m */,
 				91F4F44B189D085F00023528 /* MainMenu.xib */,
@@ -281,7 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65954EE81B3971100058CAED /* ITSwitch.h in Headers */,
-				65954F031B3971400058CAED /* ITSwitch.h in Headers */,
+				65954F031B3971400058CAED /* ITSwitchControl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,14 +361,17 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = IT;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Ilija Tovilo";
 				TargetAttributes = {
 					65954EE21B3971100058CAED = {
 						CreatedOnToolsVersion = 6.3.2;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
 					};
 					65954EEC1B3971100058CAED = {
 						CreatedOnToolsVersion = 6.3.2;
+						LastSwiftMigration = 0810;
 						TestTargetID = 91F4F432189D085F00023528;
 					};
 					91F4F453189D085F00023528 = {
@@ -446,7 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65954F041B3971490058CAED /* ITSwitch.m in Sources */,
+				65954F041B3971490058CAED /* ITSwitchControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,7 +457,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91D13E2E189D08A30019E3B7 /* ITSwitch.m in Sources */,
+				91D13E2E189D08A30019E3B7 /* ITSwitchControl.m in Sources */,
 				91F4F443189D085F00023528 /* main.m in Sources */,
 				91F4F44A189D085F00023528 /* ITAppDelegate.m in Sources */,
 			);
@@ -542,6 +537,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -562,9 +558,11 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iluuu1994.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -575,6 +573,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -591,8 +590,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iluuu1994.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -620,7 +621,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iluuu1994.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ITSwitch-Demo.app/Contents/MacOS/ITSwitch-Demo";
 			};
 			name = Debug;
@@ -643,7 +646,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iluuu1994.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ITSwitch-Demo.app/Contents/MacOS/ITSwitch-Demo";
 			};
 			name = Release;
@@ -660,13 +665,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -697,14 +708,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -713,6 +729,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -725,6 +742,7 @@
 				GCC_PREFIX_HEADER = "ITSwitch-Demo/ITSwitch-Demo-Prefix.pch";
 				INFOPLIST_FILE = "ITSwitch-Demo/ITSwitch-Demo-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.ilijatovilo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -739,6 +757,7 @@
 				GCC_PREFIX_HEADER = "ITSwitch-Demo/ITSwitch-Demo-Prefix.pch";
 				INFOPLIST_FILE = "ITSwitch-Demo/ITSwitch-Demo-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.ilijatovilo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -760,6 +779,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "ITSwitch-DemoTests/ITSwitch-DemoTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.ilijatovilo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -778,6 +798,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ITSwitch-Demo/ITSwitch-Demo-Prefix.pch";
 				INFOPLIST_FILE = "ITSwitch-DemoTests/ITSwitch-DemoTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.ilijatovilo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

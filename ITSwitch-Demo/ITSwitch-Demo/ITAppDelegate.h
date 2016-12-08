@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "ITSwitch.h"
+#import <ITSwitch/ITSwitch.h>
 
 @interface ITAppDelegate : NSObject <NSApplicationDelegate>
 
